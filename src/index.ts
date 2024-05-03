@@ -240,3 +240,19 @@ console.log(arr1?.[0]);
 const fn5: any = null;
 
 console.log(fn5?.());
+
+/**
+ * Nullish coalescing es una forma de asignar un valor por defecto
+ * a una variable si esta es null o undefined.
+ * Se usa el simbolo de doble interrogacion (??) para asignar el valor.
+ * Ejemplo: const name = user.name ?? "Chanchito feliz";
+ */
+
+const difficulty: number | null = null;
+
+const user2 = {
+  username: "chanchito feliz",
+  difficulty: difficulty ?? 0,
+};
+
+console.log(user2);
