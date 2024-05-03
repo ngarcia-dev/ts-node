@@ -146,3 +146,35 @@ validaEdad(18);
 function ErrorUsuario(): never {
   throw new Error("Error de usuario");
 }
+
+/**
+ * Que son los union types?
+ * Es un tipo de dato que puede ser de varios tipos.
+ * Se usa el simbolo de pipe (|) para unir los tipos.
+ * Ejemplo: number | string
+ */
+let puntaje: number | string = 98;
+
+puntaje = "Hello World";
+
+type Animal = {
+  id: number;
+  estado: string;
+};
+
+type User = {
+  id: number;
+  name: string;
+};
+
+let animal: User | Animal = { id: 1, estado: "", name: "" };
+
+/**
+ * Que son los type guards?
+ * Son funciones que permiten saber si una variable
+ * es de un tipo determinado.
+ */
+function sumaDos(n: number | string): number {
+  if (typeof n === "number") return n + 2;
+  return parseInt(n) + 2;
+}
