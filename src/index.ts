@@ -206,3 +206,14 @@ const producto: Product & Audit = {
  */
 type Fibo = 0 | 1 | 2 | 3 | 5;
 const nDeFibonacci: Fibo = 3;
+
+/**
+ * Nullable chaining es una forma de acceder a propiedades
+ * de un objeto que puede ser null o undefined.
+ */
+function toNumber(s: string | null | undefined) {
+  if (!s) return 0;
+  return parseInt(s);
+}
+
+const n = toNumber(undefined);
