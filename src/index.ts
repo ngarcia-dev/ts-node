@@ -178,3 +178,24 @@ function sumaDos(n: number | string): number {
   if (typeof n === "number") return n + 2;
   return parseInt(n) + 2;
 }
+
+/**
+ * Que son los intersection types?
+ * Son tipos de datos que pueden ser de varios tipos.
+ * Se usa el simbolo de ampersand (&) para unir los tipos.
+ * Ejemplo: type A & B
+ */
+type Audit = {
+  created_at: string;
+  updated_at: string;
+};
+
+type Product = {
+  name: string;
+};
+
+const producto: Product & Audit = {
+  name: "Chanchito feliz",
+  created_at: "hoy",
+  updated_at: "hoy",
+};
