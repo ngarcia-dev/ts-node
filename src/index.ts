@@ -256,3 +256,20 @@ const user2 = {
 };
 
 console.log(user2);
+
+/**
+ * Type assertion es una forma de decirle al compilador
+ * que una variable es de un tipo de dato especifico.
+ * Se usa "as" para hacer la conversion.
+ * Ejemplo: const elem1 = elem as number;
+ * Tambien se puede usar <> para hacer la conversion.
+ * Ejemplo: const input = <HTMLInputElement>document.getElementById("input");
+ *
+ * Solamente podemos hacer uso de type assertion
+ * cuando estamos seguros del tipo de dato que estamos recibiendo.
+ */
+const elem: any = null;
+
+const elem1 = elem as number;
+
+const input = <HTMLInputElement>document.getElementById("input");
