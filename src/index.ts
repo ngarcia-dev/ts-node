@@ -217,3 +217,26 @@ function toNumber(s: string | null | undefined) {
 }
 
 const n = toNumber(undefined);
+
+/**
+ * Optional chaining es una forma de acceder a propiedades
+ * de un objeto que puede ser null o undefined.
+ * Se usa el simbolo de interrogacion (?) para acceder a las propiedades.
+ * Ejemplo: user?.created_at
+ */
+function getUser(id: number) {
+  if (id < 0) return null;
+  return { id: 1, name: "Felipe", created_at: new Date() };
+}
+
+const user = getUser(2);
+
+console.log("usuario ", user?.created_at);
+
+const arr1 = null;
+
+console.log(arr1?.[0]);
+
+const fn5: any = null;
+
+console.log(fn5?.());
