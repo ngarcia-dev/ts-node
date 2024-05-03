@@ -199,3 +199,10 @@ const producto: Product & Audit = {
   created_at: "hoy",
   updated_at: "hoy",
 };
+
+/**
+ * Que son los type literals?
+ * Son tipos de datos que pueden ser de un valor especifico.
+ */
+type Fibo = 0 | 1 | 2 | 3 | 5;
+const nDeFibonacci: Fibo = 3;
