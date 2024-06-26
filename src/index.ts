@@ -273,3 +273,17 @@ const elem: any = null;
 const elem1 = elem as number;
 
 const input = <HTMLInputElement>document.getElementById("input");
+
+/**
+ * Type narrowing es una forma de hacer un casting
+ * de un tipo de dato a otro de forma mas precisa.
+ * Se usa el simbolo de doble punto (::) para hacer el casting.
+ * Ejemplo: const nums: number[] = [1, 2, 3, 4, 5];
+ * const nums2: number[] = nums.map((n) => n::number);
+ */
+
+function Lala(x: string | number) {
+  if (typeof x === "number") return x.valueOf();
+  if (typeof x === "string") return x.charCodeAt(0);
+  return 0;
+}
