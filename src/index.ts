@@ -286,3 +286,25 @@ function Lala(x: string | number) {
   if (typeof x === "string") return x.charCodeAt(0);
   return 0;
 }
+
+/**
+ * Type unknown es un tipo seguro que representa un valor que
+ * puede ser de cualquier tipo, similar al tipo any, pero con
+ * una diferencia crucial: unknown es mucho más seguro porque
+ * debes hacer un type narrowing antes de poder realizar
+ * cualquier operación sobre él.
+ */
+
+function procesa(algo: unknown) {
+  if (typeof algo === "string") {
+    return algo.toUpperCase();
+  }
+  if (typeof algo === "number") {
+    return algo.toString();
+  }
+
+  // preguntar si es la instancia de un objeto o una clase que hayamos definido
+  // if (algo instanceof OBJETO) {
+  // }
+  return null;
+}
